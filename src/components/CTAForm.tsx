@@ -32,8 +32,19 @@ export default function CTAForm() {
 
   if (isSubmitted) {
     return (
-      <section id="cta-form" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-        <div className="container mx-auto px-6">
+      <section id="cta-form" className="relative py-20 text-white overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-blue-800/90 to-indigo-900/95" />
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,13 +68,26 @@ export default function CTAForm() {
   }
 
   return (
-    <section id="cta-form" className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
-      <div className="container mx-auto px-6">
+    <section id="cta-form" className="relative py-20 text-white overflow-hidden">
+      {/* Background Image - Personas usando banca/tecnología */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/95 via-blue-800/90 to-indigo-900/95" />
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Left content */}
             <div className="lg:w-1/2 text-center lg:text-left">
-              <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-6">
+              <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-cyan-500/30">
                 Comienza ahora
               </span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -98,13 +122,13 @@ export default function CTAForm() {
 
               {/* Trust badges */}
               <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
-                <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10">
                   <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                   <span className="text-sm">100% Seguro</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10">
                   <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
