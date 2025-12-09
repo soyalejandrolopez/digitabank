@@ -142,7 +142,7 @@ export default function Footer() {
           <div className="text-center text-xs text-gray-500">
             <p className="mb-1">Proyecto desarrollado por:</p>
             <p className="text-gray-400">
-              Juliana Alejandra Díaz Vergara | Soranyi Tatiana Caballero López
+              Luisa Fernanda Galeano Montealegre
             </p>
             <p className="mt-1">Universidad Nacional Abierta y a Distancia - UNAD</p>
             <p>Curso: Emprendimiento de Base Tecnológica</p>
