@@ -1,0 +1,8 @@
+name = "digitabank"
+compatibility_date = "2025-12-10"
+
+[env.production]
+account_id = "your-account-id"  # Replace with your actual account ID
+
+# This configuration is for Next.js static export on Cloudflare Pages
+pages_build_output_dir = "./out"

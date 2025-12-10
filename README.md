@@ -44,6 +44,10 @@ To deploy this Next.js application on Cloudflare Pages:
    - Build Command: `npm run build`
    - Build output directory: `out`
    - Framework preset: `Next.js` or leave as `Automatic`
+   - **Important**: Do NOT set a custom "Build output directory" under "Environment Variables" that would trigger wrangler deploy
+   - **Important**: Make sure there is NO custom deploy command in your build settings
 3. The application is configured with static export, so it will be deployed as static files
+
+**Troubleshooting**: If you are getting a "Missing entry-point to Worker script" error, it means your Cloudflare Pages project is configured to use `wrangler deploy` instead of serving static files. Check your project settings and ensure there is no custom deploy command set - Cloudflare Pages should automatically serve the contents of the `out` directory after the build completes.
 
 Your application will be built and deployed automatically on each push to your repository.
