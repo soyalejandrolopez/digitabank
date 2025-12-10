@@ -51,3 +51,32 @@ To deploy this Next.js application on Cloudflare Pages:
 **Troubleshooting**: If you are getting a "Missing entry-point to Worker script" error, it means your Cloudflare Pages project is configured to use `wrangler deploy` instead of serving static files. Check your project settings and ensure there is no custom deploy command set - Cloudflare Pages should automatically serve the contents of the `out` directory after the build completes.
 
 Your application will be built and deployed automatically on each push to your repository.
+
+## Deploy using Cloudflare CLI
+
+To deploy this static Next.js application using Cloudflare CLI:
+
+1. Install wrangler:
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. Create an API token in your Cloudflare dashboard:
+   - Go to My Profile > API Tokens
+   - Create a token with permissions for Pages
+   - Copy the token
+
+3. Set the API token as an environment variable:
+   ```bash
+   export CLOUDFLARE_API_TOKEN="your-api-token"
+   ```
+
+4. Deploy the project:
+   ```bash
+   wrangler pages deploy out --project-name=digitabank
+   ```
+
+Alternatively, you can use:
+```bash
+CLOUDFLARE_API_TOKEN="your-api-token" wrangler pages deploy out --project-name=digitabank
+```
